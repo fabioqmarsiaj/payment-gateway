@@ -9,7 +9,7 @@ import { redirect } from "next/navigation";
 export async function loginAction(formData: FormData) {
   "use server";
   const apiKey = formData.get("apiKey");
-console.log(apiKey);
+  console.log(apiKey);
   const response = await fetch("http://localhost:8080/accounts", {
     headers: {
       "X-API-KEY": apiKey as string,

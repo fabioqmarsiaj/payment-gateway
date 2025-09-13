@@ -1,10 +1,11 @@
 "use client";
 
-import { CreditCard } from "lucide-react";
+import { CreditCard, PlusIcon } from "lucide-react";
 import { Input } from "../../../components/ui/input";
 import { Textarea } from "../../../components/ui/textarea";
 import { Button } from "../../../components/ui/button";
 import { createInvoiceAction } from "./create-invoice-action";
+import Link from "next/link";
 
 export function InvoiceForm() {
   return (
@@ -141,7 +142,9 @@ export function InvoiceForm() {
           variant="outline"
           className="bg-[#2a3749] border-gray-700"
         >
-          Cancel
+          <Link href="/invoices">
+            Cancel
+          </Link>
         </Button>
 
         <Button

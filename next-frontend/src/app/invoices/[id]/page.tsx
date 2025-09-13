@@ -105,8 +105,8 @@ export default async function InvoiceDetailsPage({
               <span className="text-gray-400">Type</span>
               <span className="text-white font-medium">
                 {invoiceData.payment_type === "credit_card"
-                  ? "Cartão de crédito"
-                  : "Boleto"}
+                  ? "Credit Card"
+                  : "PIX"}
               </span>
             </div>
 

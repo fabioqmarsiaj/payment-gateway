@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input"
-// import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+//import { Input } from "@/components/ui/input"
+//import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { PlusIcon, Eye, Download } from "lucide-react";
 import Link from "next/link";
 import { StatusBadge } from "@/components/StatusBadge";
@@ -93,7 +93,7 @@ export async function InvoiceList() {
             className="bg-[#2a3749] border-gray-700 text-white placeholder-gray-400"
           />
         </div>
-      </div> */}
+      </div> }
 
       {/* Tabela de Faturas */}
       <div className="overflow-x-auto">
@@ -104,7 +104,7 @@ export async function InvoiceList() {
                 ID
               </th>
               <th className="text-left py-3 px-4 text-gray-400 font-medium text-sm">
-                DATA
+                DATE
               </th>
               <th className="text-left py-3 px-4 text-gray-400 font-medium text-sm">
                 DESCRIPTION
