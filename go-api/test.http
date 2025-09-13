@@ -8,10 +8,49 @@ POST {{baseUrl}}/accounts
 Content-Type: application/json
 
 {
-    "name": "John Doe",
-    "email": "john@aaaa.com"
+    "name": "Fabio Marsiaj 2",
+    "email": "fabio2@gmail.com"
 }
 
 ### Get Account data
 GET {{baseUrl}}/accounts
 X-API-Key: {{apiKey}}
+
+### Create new Invoice
+# @name createInvoice
+POST {{baseUrl}}/invoice
+Content-Type: application/json
+X-API-Key: {{apiKey}}
+
+{
+    "amount": 100.50,
+    "description": "Teste de fatura",
+    "payment_type": "credit_card",
+    "card_number": "4111111111111111",
+    "cvv": "123",
+    "expiry_month": 12,
+    "expiry_year": 2025,
+    "cardholder_name": "John Doe"
+}
+
+### Get Invoice data
+@invoiceId = {{createInvoice.response.body.id}}
+GET {{baseUrl}}/invoice/{{invoiceId}}
+X-API-Key: {{apiKey}}
+
+
+### Create invoice above 10000 amount
+POST {{baseUrl}}/invoice
+Content-Type: application/json
+X-API-Key: {{apiKey}}
+
+{
+    "amount": 15000,
+    "description": "Teste de fatura com valor alto",
+    "payment_type": "credit_card",
+    "card_number": "4111111111111111",
+    "cvv": "123",
+    "expiry_month": 12,
+    "expiry_year": 2025,
+    "cardholder_name": "John Doe"
+} 
